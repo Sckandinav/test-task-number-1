@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.main {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: max-content;
+  background: #ccc;
+}
+
+.wrapper {
+  flex-grow: 1;
+}
+
+.side-1 {
+  margin-bottom: -3px;
+  display: inline-block;
+  width: 200px;
+  background: red;
+  resize: vertical;
+  overflow: auto;
+}
+
+.content {
+  width: calc(100% - 200px);
+  padding: 20px;
+  background: yellow;
+  float: right;
+  resize: vertical;
+  overflow: auto;
+}
+
+.img {
+  margin: 0 20px 20px 0;
+  max-width: 280px;
+  max-height: 170px;
+  float: left;
+}
+
+.side-2 {
+  margin-bottom: -3px;
+  display: inline-block;
+  width: 200px;
+  background: green;
+  resize: vertical;
+  overflow: auto;
+}
+
+.footer {
+  height: max-content;
+  background: #ccc;
+}
+
+@media (max-width: 768px) {
+
+  .side-1 {
+    margin-bottom: -3px;
+    display: block;
+    width: auto;
+  }
+
+  .content {
+    width: auto;
+    float: none;
+  }
+
+  .side-2 {
+    margin-bottom: -3px;
+    display: block;
+    width: auto;
+  }
+}
